@@ -10,6 +10,7 @@ except Exception:
     API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="Simple Social", layout="wide")
+st.sidebar.info(f"Debug: API_URL is currently set to '{API_URL}'")
 
 # Initialize session state
 if 'token' not in st.session_state:
