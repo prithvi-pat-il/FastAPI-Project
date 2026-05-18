@@ -12,5 +12,5 @@ dependencies = [
     "python-dotenv>=1.2.2",
     "sqlalchemy>=2.0.49",
     "streamlit>=1.57.0",
-    "uvicorn[standadrd]>=0.47.0",
+    "uvicorn[standard]>=0.47.0",
 ]
