@@ -4,7 +4,10 @@ import base64
 import urllib.parse
 import os
 
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+try:
+    API_URL = st.secrets.get("API_URL", os.getenv("API_URL", "http://localhost:8000"))
+except Exception:
+    API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="Simple Social", layout="wide")
 
