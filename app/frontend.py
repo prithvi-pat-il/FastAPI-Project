@@ -4,10 +4,12 @@ import base64
 import urllib.parse
 import os
 
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 try:
-    API_URL = st.secrets.get("API_URL", os.getenv("API_URL", "http://localhost:8000"))
+    if "API_URL" in st.secrets:
+        API_URL = st.secrets["API_URL"]
 except Exception:
-    API_URL = os.getenv("API_URL", "http://localhost:8000")
+    pass
 
 st.set_page_config(page_title="Simple Social", layout="wide")
 st.sidebar.info(f"Debug: API_URL is currently set to '{API_URL}'")
