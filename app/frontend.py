@@ -4,7 +4,7 @@ import base64
 import urllib.parse
 import os
 
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+API_URL = os.getenv("API_URL", "https://fastapi-project-hbe3.onrender.com")
 try:
     if "API_URL" in st.secrets:
         API_URL = st.secrets["API_URL"]
